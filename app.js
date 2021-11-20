@@ -44,4 +44,32 @@ app.get('/project/:id', (req, res) => {
     });
 });
 
+//The 404 handler should create a custom new Error(), set its status property to 404 and set its message 
+//property to a user friendly message. Then the 404 handler should log out the new error's message 
+//and status properties.
+
+app.use((err, req, res, next) => {
+    const err = new Error('Not Found');
+    err.status = 404
+    err.message = `Sorry, something went wrong - error status: (${err.status}) for further details`
+    next(err);
+});
+
+//After the 404 handler in app.js add a global error handler that will deal with 
+//any server errors the app encounters. This handler should ensure that there is 
+//an err.status property and an err.message property if they don't already exist, 
+//and then log out the err object's message and status.
+app.use((err, req, res, next) => {
+    // if(err.status === 404) {
+    //     res.message = `Sorry, our site had a (${err.status}) error, for further details:
+    //        <br> </br>
+    //        <p>${err.stack}</p>`
+    //     res.send(res.message);
+    // } else {
+        err.message = err.message;
+        err.status(err.status);
+        res.send(`Apologies, this error has occurred: (${err.status}): ${err.message}`)
+    // }
+});
+
 app.listen(4000);
