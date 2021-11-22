@@ -15,8 +15,10 @@ app.use('/static', express.static('public'));
 
 // An "index" route (/) to render the "Home" page with the locals set to data.projects CHECK 
 app.get('/', (req, res) => {
+    const projects = data.projects;
     res.locals.data = data.projects;
-    res.render('index');
+    res.render('index', { projects } );
+    console.log(projects[2].image_urls[1]);
 });
 
 // An "about" route (/about) to render the "About" page
@@ -29,9 +31,14 @@ app.get('/about', (req, res) => {
 // of the Pug project template to show off each project. Which means adding data, or "locals", as 
 // an object that contains data to be passed to the Pug template
 app.get('/projects/:id', (req, res) => {
-    res.render('project', {
-        project: data.projects[req.params.id]
-    });
+    const projectID = req.params.id;
+    const projectMatch = data.projects[projectID]
+
+    if(projectMatch) {
+        res.render('project', { projectMatch })
+    } else {
+        res.sendStatus(404);
+    }
 });
 
 // Dynamic "project" routes /project/:id
@@ -39,9 +46,14 @@ app.get('/projects/:id', (req, res) => {
 // of the Pug project template to show off each project. Which means adding data, or "locals", as 
 // an object that contains data to be passed to the Pug template
 app.get('/project/:id', (req, res) => {
-    res.render('project', {
-        project: data.projects[req.params.id].project_name
-    });
+    const projectID = req.params.id;
+    const projectMatch = data.projects[projectID]
+
+    if(projectMatch) {
+        res.render('project', { projectMatch })
+    } else {
+        res.sendStatus(404);
+    }
 });
 
 //The 404 handler should create a custom new Error(), set its status property to 404 and set its message 
