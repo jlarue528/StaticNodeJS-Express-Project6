@@ -7,7 +7,7 @@
             "technologies": ["data structures", "basic javascript syntax"],
             "live_link": "",
             "github_link": "https://github.com/jlarue528/project-1",
-            "image_urls": ["/images/Project1LandScapeImage.jpg", "/images/Project1ScreenShotLandingPage.jpg"]
+            "image_urls": ["images/Project1LandScapeImage.jpg", "images/Project1ScreenShotLandingPage.jpg"]
         }, 
         {
             "id": "1",
@@ -29,7 +29,7 @@
         }, 
         {
             "id": "3",
-            "project_name": "OOP Game Show App - Phrase Hunter",
+            "project_name": "Phrase Hunter",
             "description": "A user guesses the word - for each correct answer the letter is displayed on the board - for each incorrect a user loses a 'life' in the game.",
             "technologies": ["JavaScript", "Object-Oriented Programming"],
             "live_link": "",

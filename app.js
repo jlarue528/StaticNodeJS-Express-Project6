@@ -3,16 +3,22 @@ const app = express();
 
 const data = require('./data.json');
 
-// set your “view engine” to “pug”
-// Setting view engine
+/*
+    Setting view engine
+*/
 app.set('view engine', 'pug');
 
-// Middleware
 
+/*
+    Middleware
+*/
 // use a static route and the express.static method to serve the static files located in the public folder
 app.use('/static', express.static('public'));
 
 
+/*
+    Routes
+*/
 // An "index" route (/) to render the "Home" page with the locals set to data.projects CHECK 
 app.get('/', (req, res) => {
     const projects = data.projects;
