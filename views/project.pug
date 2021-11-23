@@ -21,13 +21,13 @@ block content
           each technology in projectMatch.technologies
             li= technology
 
-        a.btn-link(href=`${projectMatch.live_link}`) Live Demo
+        a.btn-link(href=`${projectMatch.live_link}`, target="_blank") Live Demo
         a.btn-link(href=`${projectMatch.github_link}`) GitHub Repo
 
     .project-img-box.box
 
-      img.project-img(src=`${projectMatch.image_urls[0]}`, width="1200", height="550", alt=`${projectMatch.project_name}`)
-      img.project-img(src=`${projectMatch.image_urls[1]}`, width="1200", height="550", alt=`${projectMatch.project_name}`)
+      img.project-img(src=`${projectMatch.image_urls[0]}` alt=`${projectMatch.project_name}`)
+      img.project-img(src=`${projectMatch.image_urls[1]}` alt=`${projectMatch.project_name}`)
 
     nav.nav
       a(href='/')

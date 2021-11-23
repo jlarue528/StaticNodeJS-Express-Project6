@@ -13,7 +13,7 @@ block content
 
       each project in projects
         .cell
-          a(href=`${project.live_link}`)
-            img.thumbnail(src= `${project.image_urls[1]}`, alt=`Thumbnail: ${project.project_name}`)
+          a(href=`${project.live_link}`, target="_blank")
+            img.thumbnail(src= `${project.image_urls[1]}`, alt=`Thumbnail: ${project.project_name}`, target="_blank")
             h5= project.project_name
 
