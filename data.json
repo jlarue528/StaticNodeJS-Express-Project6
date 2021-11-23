@@ -5,7 +5,7 @@
             "project_name": "Random Quote Generator",
             "description": "A program that displays a randomly selected quote each times a user clicks a button.",
             "technologies": ["data structures", "basic javascript syntax"],
-            "live_link": "",
+            "live_link": "https://jlarue528.github.io/project-1/",
             "github_link": "https://github.com/jlarue528/project-1",
             "image_urls": ["/static/images/Project1LandScapeImage.jpg", "/static/images/Project1ScreenShotLandingPage.jpg"]
         }, 
@@ -14,7 +14,7 @@
             "project_name": "Data Pagination and Filtering",
             "description": "Display student information on several pages that a user can easily navigate and view",
             "technologies": ["CSS Selectors", "DOM"],
-            "live_link": "",
+            "live_link": "https://jlarue528.github.io/Data-Pagination-and-Filtering/",
             "github_link": "https://github.com/jlarue528/Data-Pagination-and-Filtering",
             "image_urls": ["/static/images/Project2LandScapeImage.jpg", "/static/images/Project2ScreenShotLandingPage.jpg"]
         }, 
@@ -23,7 +23,7 @@
             "project_name": "Interactive Form",
             "description": "An interactive form allowing people to sign up for Full Stack Javascript Conference",
             "technologies": ["HTML Forms", "CSS", "HTML"],
-            "live_link": "",
+            "live_link": "https://jlarue528.github.io/InteractiveForm/",
             "github_link": "https://github.com/jlarue528/InteractiveForm",
             "image_urls": ["/static/images/Project3LandScapeImage.jpg", "/static/images/Project3ScreenShotLandingPage.jpg"]
         }, 
@@ -32,7 +32,7 @@
             "project_name": "Phrase Hunter",
             "description": "A user guesses the word - for each correct answer the letter is displayed on the board - for each incorrect a user loses a 'life' in the game.",
             "technologies": ["JavaScript", "Object-Oriented Programming"],
-            "live_link": "",
+            "live_link": "https://jlarue528.github.io/OOPGameShowApp/",
             "github_link": "https://github.com/jlarue528/OOPGameShowApp",
             "image_urls": ["/static/images/Project4LandScapeImage.jpg", "/static/images/Project4ScreenShotLandingPage.jpg"]
         }, 
