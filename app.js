@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
     const projects = data.projects;
     res.locals.data = data.projects;
     res.render('index', { projects } );
-    console.log(projects[2].image_urls[1]);
 });
 
 // An "about" route (/about) to render the "About" page
@@ -36,14 +35,15 @@ app.get('/about', (req, res) => {
 // based on the id of the project that render a customized version 
 // of the Pug project template to show off each project. Which means adding data, or "locals", as 
 // an object that contains data to be passed to the Pug template
-app.get('/projects/:id', (req, res) => {
+app.get('/projects/:id', (req, res, next) => {
     const projectID = req.params.id;
     const projectMatch = data.projects[projectID]
 
     if(projectMatch) {
         res.render('project', { projectMatch })
     } else {
-        const err = err.status(400);
+        const err = new Error('Page was not found')
+        err.status = 404;
         next(err);
     }
 });
@@ -52,14 +52,15 @@ app.get('/projects/:id', (req, res) => {
 // based on the id of the project that render a customized version 
 // of the Pug project template to show off each project. Which means adding data, or "locals", as 
 // an object that contains data to be passed to the Pug template
-app.get('/project/:id', (req, res) => {
+app.get('/project/:id', (req, res, next) => {
     const projectID = req.params.id;
     const projectMatch = data.projects[projectID]
 
     if(projectMatch) {
         res.render('project', { projectMatch })
     } else {
-        const err = err.status(400);
+        const err = new Error('Page was not found')
+        err.status = 404;
         next(err)
     }
 });
