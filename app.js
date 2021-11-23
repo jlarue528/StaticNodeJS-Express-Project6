@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 const data = require('./data.json');
+const port = process.env.PORT || 4000
 
 /*
     Setting view engine
@@ -43,7 +44,10 @@ app.get('/projects/:id', (req, res) => {
     if(projectMatch) {
         res.render('project', { projectMatch })
     } else {
+        // const err = res.status;
+        // console.log(err);
         res.sendStatus(404);
+        // next(err);
     }
 });
 
@@ -58,6 +62,9 @@ app.get('/project/:id', (req, res) => {
     if(projectMatch) {
         res.render('project', { projectMatch })
     } else {
+        // const err = new Error('This project was not found')
+        // err.status = 404;
+        // next(err);
         res.sendStatus(404);
     }
 });
@@ -70,7 +77,7 @@ app.get('/project/:id', (req, res) => {
     404 Error Handler
 */
 app.use((req, res, next) => {
-    const err = new Error('Not Found');
+    const err = new Error('This Page has not been found');
     err.status = 404
     next(err);
 });
@@ -93,4 +100,4 @@ app.use((err, req, res, next) => {
     }
 });
 
-app.listen(4000);
+app.listen(port);
