@@ -7,7 +7,7 @@
             "technologies": ["data structures", "basic javascript syntax"],
             "live_link": "",
             "github_link": "https://github.com/jlarue528/project-1",
-            "image_urls": ["images/Project1LandScapeImage.jpg", "images/Project1ScreenShotLandingPage.jpg"]
+            "image_urls": ["/static/images/Project1LandScapeImage.jpg", "/static/images/Project1ScreenShotLandingPage.jpg"]
         }, 
         {
             "id": "1",
@@ -16,7 +16,7 @@
             "technologies": ["CSS Selectors", "DOM"],
             "live_link": "",
             "github_link": "https://github.com/jlarue528/Data-Pagination-and-Filtering",
-            "image_urls": ["/images/Project2LandScapeImage.jpg", "/images/Project2ScreenShotLandingPage.jpg"]
+            "image_urls": ["/static/images/Project2LandScapeImage.jpg", "/static/images/Project2ScreenShotLandingPage.jpg"]
         }, 
         {
             "id": "2",
@@ -25,7 +25,7 @@
             "technologies": ["HTML Forms", "CSS", "HTML"],
             "live_link": "",
             "github_link": "https://github.com/jlarue528/InteractiveForm",
-            "image_urls": ["/images/Project3LandScapeImage.jpg", "/images/Project3ScreenShotLandingPage.jpg"]
+            "image_urls": ["/static/images/Project3LandScapeImage.jpg", "/static/images/Project3ScreenShotLandingPage.jpg"]
         }, 
         {
             "id": "3",
@@ -34,7 +34,7 @@
             "technologies": ["JavaScript", "Object-Oriented Programming"],
             "live_link": "",
             "github_link": "https://github.com/jlarue528/OOPGameShowApp",
-            "image_urls": ["/images/Project4LandScapeImage.jpg", "/images/Project4ScreenShotLandingPage.jpg"]
+            "image_urls": ["/static/images/Project4LandScapeImage.jpg", "/static/images/Project4ScreenShotLandingPage.jpg"]
         }, 
         {
             "id": "4",
@@ -43,7 +43,7 @@
             "technologies": ["API", "GIT", "HTTP", "AJAX"],
             "live_link": "",
             "github_link": "https://github.com/jlarue528/Random-User-Generator-API",
-            "image_urls": ["/images/Project5LandScapeImage.jpg", "/images/Project5ScreenShotLandingPage.jpg"]
+            "image_urls": ["/static/images/Project5LandScapeImage.jpg", "/static/images/Project5ScreenShotLandingPage.jpg"]
         }
     ]
 }
